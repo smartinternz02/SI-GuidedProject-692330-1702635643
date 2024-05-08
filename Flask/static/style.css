@@ -1,0 +1,154 @@
+body 
+{ 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+} 
+.main
+{ 
+    
+    color: #000000; 
+    padding: 10px 0; 
+    text-align: center;
+    height: 8vh; 
+    
+} 
+.main1
+{ 
+    background-color: black;
+    color:#ffff; 
+  padding: 10px 0px;
+    text-align: center;
+    height: 8vh;
+    margin: 0%;
+    display: flex; 
+    justify-content: space-between;
+    justify-content:space-evenly ;
+    justify-content: space-around;
+    
+} 
+.header h1 
+{ 
+ margin: 10px;
+} 
+.main{
+    display: flex;
+ 
+}
+
+.top{
+    background-image: url(bigstock-fraud.detection-scaled.jpg);
+    height: 100vh;
+    background-size: cover;
+    
+   
+    background-repeat: no-repeat;
+}
+.nav 
+{ 
+  margin: 0%;
+    color: black; 
+   display: flex;
+    list-style-type: none; 
+ 
+   
+} 
+.nav>ul>li>a 
+{
+    font-size: larger;
+    font-weight:bold ;
+     color: #0a0909; 
+     margin: 5vh;
+     text-decoration: none;
+    }  
+    .nav1 
+{ 
+  
+    color: black; 
+      list-style-type: none; 
+      display: flex;
+ 
+   
+} 
+    .nav1>ul>li>a 
+{
+     color: white; 
+     text-decoration: none; 
+     margin: 5vh;
+     font-weight: bolder;
+     font-size: larger;
+    }  
+#insurance-claims>p{
+font-size: 25px;
+width: 50%;
+}
+#insurance-claims>h2{
+    font-size: 35px;
+   
+}
+ #insurance-claims{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+ }
+ .about-img>img{
+    height: 500px;
+    width: 580px;
+    position: absolute;
+    left: 4%;
+    margin-top: 5vh;
+ }
+ .matter-main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 100%;
+   
+ }
+ .about{
+    height: 100vh;
+margin: 0%;
+    display: flex;
+    flex-direction: column;
+   
+ }
+ .one>h4{
+    font-size: 25px;
+margin-bottom: 0%;
+ }
+ .one>p{
+    font-size: 15px;
+ }
+ .matter-main{
+    margin-top: 0%;
+ }
+ .about-matter{
+    width: 90vh;
+ }
+ .predict-main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ .main-container{
+    display: flex;
+    height: 80vh;
+    
+ }
+ .row{
+    margin-bottom: 5vh;
+ }
+ .pre{
+    background-image: url(stock.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    
+ }
+ .pre>h1,h2{
+    font-size: 40px;
+    margin: 0%;
+    text-align: end;
+   
+ }

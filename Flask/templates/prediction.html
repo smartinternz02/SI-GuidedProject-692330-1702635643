@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Insurance Claim Prediction Result</title>
+</head>
+<body>
+    <div class="pre">
+    <h1 style="position: absolute; top: 40%; left: 45%;">Insurance Claim Prediction Result</h1>
+    {% if prediction %}
+        <h2 style="position: absolute; top: 50%; left: 45%;">Prediction: {{ prediction }}</h2>
+    {% endif %}
+</div>
+</body>
+</html>

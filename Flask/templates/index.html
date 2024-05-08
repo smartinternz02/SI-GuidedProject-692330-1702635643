@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Insurance Claim Prediction</title>
+</head>
+<body>
+    <div class="main1">
+        <div class="header"> 
+            <h1>Auto Insurance Claims</h1> 
+        </div>
+        
+            <div class="nav1" style="margin-left: 250px;"> 
+                <ul style="display: flex; "> 
+                    <li style="list-style: none;">
+                        <a href="/home">Home</a>
+                    </li> <li style="list-style: none;"><a href="/about">About</a>
+                    </li> 
+                    <li style="list-style: none;">
+                        <a href="#contact">Contact</a>
+                    </li> 
+                   
+                </ul>
+            </div>
+            <div class="button"><button style="border-radius: 30px; height: 30px; width: 80px; font-weight: bold; background-color: rgb(241, 224, 181); margin-top: 9px; ">
+                <a href="/index" style="text-decoration: none; list-style: none; color: black;">PREDICT</a></button>
+            </div>
+          
+    </div>  
+
+    <h1>Insurance Claim Prediction</h1>
+    <form action="/predict" method="post" >
+       <div class="one" style="display: flex; justify-content: space-between; margin-bottom: 35px;">
+        <label for="months_as_customer">Months as Customer:</label>
+        <input type="text" name="months_as_customer" required><br>
+        
+        <label for="policy_number">Policy Number:</label>
+        <input type="text" name="policy_number" required><br>
+        
+        <label for="policy_bind_date">Policy Bind Date:</label>
+        <input type="text" name="policy_bind_date" required><br>
+        
+        <label for="policy_state">Policy State:</label>
+        <input type="text" name="policy_state" required><br>
+    </div>
+    <div class="two" style="display: flex; justify-content: space-between; margin-bottom: 35px;"  >
+        <label for="policy_csl">Policy CSL:</label>
+        <input type="text" name="policy_csl" required><br>
+    
+    
+        <label for="policy_deductable">Policy Deductable:</label>
+        <input type="text" name="policy_deductable" required><br>
+        
+        <label for="policy_annual_premium">Policy Annual Premium:</label>
+        <input type="text" name="policy_annual_premium" required><br>
+        
+        <label for="insured_zip">Insured ZIP:</label>
+        <input type="text" name="Insured_zip" placeholder="Insured Zip"><br>
+    </div>
+    <div class="three" style="display: flex; justify-content: space-between; margin-bottom: 35px;">
+        <label for="insured_sex">Insured Sex:</label>
+        <input type="text" name="insured_sex" required><br>
+        
+        <label for="insured_occupation">Insured Occupation:</label>
+        <input type="text" name="insured_occupation" required><br>
+   
+    
+        <label for="insured_hobbies">Insured Hobbies:</label>
+        <input type="text" name="insured_hobbies" required><br>
+        
+        <label for="insured_relationship">Insured Relationship:</label>
+        <input type="text" name="insured_relationship" required><br>
+    </div> 
+    <div class="four" style="display: flex; justify-content: space-between; margin-bottom: 35px;"> 
+        <label for="capital_gains">Capital Gains:</label>
+        <input type="text" name="capital_gains" required><br>
+        
+        <label for="capital_loss">Capital Loss:</label>
+        <input type="text" name="capital_loss" required><br>
+        
+        <label for="incident_date">Incident Date:</label>
+        <input type="text" name="incident_date" required><br>
+   
+    
+        <label for="incident_type">Incident Type:</label>
+        <input type="text" name="incident_type" required><br>
+    </div> 
+    <div class="five" style="display: flex; justify-content: space-between; margin-bottom: 35px;">
+        <label for="collision_type">Collision Type:</label>
+        <input type="text" name="collision_type" required><br>
+        
+        <label for="incident_severity">Incident Severity:</label>
+        <input type="text" name="incident_severity" required><br>
+        
+        <label for="authorities_contacted">Authorities Contacted:</label>
+        <input type="text" name="authorities_contacted" required><br>
+        
+        <label for="incident_location">Incident Location:</label>
+        <input type="text" name="incident_location" required><br>
+    </div>
+    <div class="six" style="display: flex; justify-content: space-between; margin-bottom: 35px;"> 
+        <label for="incident_hour_of_the_day">Incident Hour of the Day:</label>
+        <input type="text" name="incident_hour_of_the_day" required><br>
+        
+        <label for="number_of_vehicles_involved">Number of Vehicles Involved:</label>
+        <input type="text" name="number_of_vehicles_involved" required><br>
+        
+        <label for="property_damage">Property Damage:</label>
+        <input type="text" name="property_damage" required><br>
+        
+        <label for="bodily_injuries">Bodily Injuries:</label>
+        <input type="text" name="bodily_injuries" required><br>
+        </div>
+        <div class="seven" style="display: flex; justify-content: space-between; margin-bottom: 35px;">
+        <label for="witnesses">Witnesses:</label>
+        <input type="text" name="witnesses" required><br>
+    
+ 
+        <label for="police_report_available">Police Report Available:</label>
+        <input type="text" name="police_report_available" required><br>
+        
+        <label for="total_claim_amount">Total Claim Amount:</label>
+        <input type="text" name="total_claim_amount" required><br>
+        
+        <label for="auto_make">Auto Make:</label>
+        <input type="text" name="auto_make" required><br>
+    </div>
+    <div class="eight" style="display: flex;  margin-bottom: 30px;"> 
+        <label for="auto_model">Auto Model:</label>
+        <input type="text" name="auto_model" required><br>
+        
+        <label for="auto_year">Auto Year:</label>
+        <input type="text" name="auto_year" required><br>
+    </div> 
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if predict %}
+        <h2>Prediction: {{ predict }}</h2>
+    {% endif %}
+</body>
+</html>
